@@ -1,8 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { StyleSheet, View, FlatList, RefreshControl } from 'react-native';
-import uuid from 'react-uuid';
 
-// import { messagesData } from '../data/messages';
 import { useFetchMessage } from '../hooks/useFetchMessage';
 import Message from './Message';
 import { DataContext } from '../context/DataProvider';

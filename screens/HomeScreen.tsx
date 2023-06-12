@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Text, View } from 'react-native';
 
 import Layout from '../components/Layout';
 import ListMessage from '../components/ListMessage';

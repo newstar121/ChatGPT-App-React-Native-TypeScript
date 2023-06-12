@@ -3,8 +3,6 @@ import uuid from 'react-uuid';
 import { FontAwesome } from '@expo/vector-icons';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 
-import { MessageType } from '../types/types';
-
 import { DataContext } from '../context/DataProvider';
 
 const InputMessage = () => {
