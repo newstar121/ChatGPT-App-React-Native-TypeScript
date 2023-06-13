@@ -42,11 +42,11 @@ const styles = StyleSheet.create({
 		padding: 10,
 		margin: 10,
 		borderRadius: 10,
-		alignSelf: 'flex-end',
 	},
 	text: {
 		color: '#fff',
 		fontSize: 16,
+		
 		alignSelf: 'flex-end',
 	},
 	profile: {

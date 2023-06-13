@@ -22,11 +22,15 @@ export const useFetchMessage = (message: string): state => {
     }
 
     const loadMessage = async () => {
-        const data = await getMessage(message);
-        setState({
-            data,
-            isLoading: false,
-        });
+        try {
+            const data = await getMessage(message);
+            setState({
+                data,
+                isLoading: false,
+            });
+        } catch (err) {
+            console.log(err);
+        }
     };
 
     useEffect(() => {
