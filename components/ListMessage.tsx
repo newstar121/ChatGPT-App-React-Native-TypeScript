@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
 	listContainer: {
 		flex: 1,
 		width: '100%',
-		backgroundColor: '#222f3e',
+		backgroundColor: '#000000',
 		marginBottom: 35,
 	},
 });

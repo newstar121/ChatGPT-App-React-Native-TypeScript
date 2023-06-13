@@ -20,7 +20,8 @@ export default function App() {
 						component={HomeScreen}
 						options={({ navigation }) => ({
 							title: 'ChatGPT AI',
-							headerStyle: { backgroundColor: '#222f3e' },
+							// headerStyle: { backgroundColor: '#000000' },
+							headerStyle: { backgroundColor: '#000000' },
 							headerTitleStyle: { color: '#fff' },
 							headerTintColor: '#fff',
 							headerRight: () => (
@@ -35,7 +36,7 @@ export default function App() {
 						component={Infomation}
 						options={{
 							title: 'Infomation',
-							headerStyle: { backgroundColor: '#222f3e' },
+							headerStyle: { backgroundColor: '#000000' },
 							headerTitleStyle: { color: '#fff' },
 							headerTintColor: '#fff',
 						}}
