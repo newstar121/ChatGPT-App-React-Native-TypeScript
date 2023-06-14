@@ -5,13 +5,13 @@ import { useFetchMessage } from '../hooks/useFetchMessage';
 import Message from './Message';
 import { DataContext } from '../context/DataProvider';
 import { MessageType } from '../types/types';
-
+import uuid from 'react-uuid';
 
 const ListMessage = () => {
 
 	const [messages, setMessages] = useState<MessageType[]>([
 		{
-			id: "sldkfs",
+			id: "1",
 			create: (new Date()).getTime(),
 			model: 'tx-3',
 			text: "sdsfsdf sdfsdfs dfsdfsdfsd fsdf sdfsdfs  ",
@@ -26,12 +26,12 @@ const ListMessage = () => {
 			},
 		},
 		{
-			id: "sldkfs",
+			id: "2",
 			create: (new Date()).getTime(),
 			model: 'tx-3',
 			text: "sdsfs dfsdfsdf sdfsdfsdf sdfsdfsdfsd fsdfds fsddfs",
 			user: {
-				name: 'newstart',
+				name: 'newstar',
 				avatar: 'sdfsdf'
 			},
 			usage: {
@@ -41,7 +41,7 @@ const ListMessage = () => {
 			},
 		},
 		{
-			id: "sldkfs",
+			id: "3",
 			create: (new Date()).getTime(),
 			model: 'tx-3',
 			text: "sdsfsdf sdfsdf sdfsdfsdf sdfsdfsdf sdfsdfd sfsddfs",
@@ -56,12 +56,12 @@ const ListMessage = () => {
 			},
 		},
 		{
-			id: "sldkfs",
+			id: "4",
 			create: (new Date()).getTime(),
 			model: 'tx-3',
 			text: "sdsfsd fsdfsdfs dfsdfsdfsd fsdfsdfsdfsd  fdsfsddfssd sfsdfs dfsdfsd fsdfsdfsd fsdf sd fsd fsd fd sfsddf ssdsfs dfsdfs dfsdfs dfsdf sdfs dfsdfsdfsdf dsfsddfs",
 			user: {
-				name: 'newstart',
+				name: 'newstar',
 				avatar: 'sdfsdf'
 			},
 			usage: {
@@ -71,7 +71,7 @@ const ListMessage = () => {
 			},
 		},
 		{
-			id: "sldkfs",
+			id: "5",
 			create: (new Date()).getTime(),
 			model: 'tx-3',
 			text: "sdsfs dfsdfsd fsdfsdf  sdfsd fsdfsdf sdf sdf dsf sddfs",
@@ -99,20 +99,20 @@ const ListMessage = () => {
 	useEffect(() => {
 
 		if (textInput?.text) {
-			setMessages((messages) => [...messages, textInput]);
+			setMessages((messages: any) => [...messages, textInput]);
 		}
 
 		if (!!data?.text) {
-			setMessages((messages) => [...messages, data]);
+			setMessages((messages: any) => [...messages, data]);
 		}
 
-		setMessages((messages) => [...messages, {
-			id: "sldkfs",
+		setMessages((messages: any) => [...messages, {
+			id: uuid(),
 			create: (new Date()).getTime(),
 			model: 'tx-3',
 			text: "sdsfsdfsd fsdfsdfsdfsd fsdfsdf sdfsd fsdfdsf sddfs",
 			user: {
-				name: 'newstart',
+				name: 'newstar',
 				avatar: 'sdfsdf'
 			},
 			usage: {
@@ -127,12 +127,12 @@ const ListMessage = () => {
 	console.log('isLoading', isLoading);
 
 	return (
-		<View style={{width:'100%', marginLeft:'10px', marginRight: '10px'}}>
+		<View style={styles.container}>
 			<FlatList
 				style={styles.listContainer}
 				data={messages}
 				renderItem={({ item }) => <Message message={item} />}
-				keyExtractor={(item) => item.id.toString()}
+				keyExtractor={(item: { id: { toString: () => any; }; }) => item.id.toString()}
 				refreshControl={
 					<RefreshControl
 						refreshing={false}
@@ -147,10 +147,17 @@ const ListMessage = () => {
 export default ListMessage;
 
 const styles = StyleSheet.create({
+	container: {
+		flex: 1,
+		width: '100%',
+		marginLeft: 10,
+		marginRight: 10,
+		paddingLeft: 10,
+		paddingRight: 10,
+		overflow: 'scroll',
+	},
 	listContainer: {
 		flex: 1,
 		width: '100%',
-		backgroundColor: '#000000',
-		marginBottom: 35,
 	},
 });

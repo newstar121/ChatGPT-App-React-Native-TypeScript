@@ -50,10 +50,11 @@ export default InputMessage;
 
 const styles = StyleSheet.create({
 	inputMessage: {
-		flex: 1,
+		// flex: 1,
 		flexDirection: 'row',
-		alignItems: 'center',
 		justifyContent: 'center',
+		alignItems: 'center',
+		width: '100%',
 	},
 	input: {
 		width: '75%',
@@ -61,11 +62,10 @@ const styles = StyleSheet.create({
 		padding: 10,
 		fontSize: 14,
 		textAlign: 'center',
-		color: '#ffffff',
+		color: '#000',
 		borderColor: '#10ac84',
 		borderWidth: 1,
-		borderRadius: 5,
-		backgroundColor: '#000000',
+		borderRadius: 10,
 	},
 	button: {
 		flex: 0,

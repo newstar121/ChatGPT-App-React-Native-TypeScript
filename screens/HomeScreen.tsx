@@ -1,17 +1,28 @@
-import React, { useState } from 'react';
-
+import { StyleSheet, View } from 'react-native';
 import Layout from '../components/Layout';
 import ListMessage from '../components/ListMessage';
 import InputMessage from '../components/InputMessage';
+import Footer from './Footer';
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
 
 	return (
-		<Layout>
-			<ListMessage />
-			<InputMessage />
-		</Layout>
+		<View style={styles.container}>
+			<Layout>
+				<ListMessage />
+				<InputMessage />
+			</Layout>
+			<Footer navigation={navigation}></Footer>
+		</View>
+
 	);
 };
 
 export default HomeScreen;
+
+const styles = StyleSheet.create({
+	container: {
+		flex: 1,
+		justifyContent: 'space-between'
+	}
+})
