@@ -13,17 +13,23 @@ export const getMessage = async (message: string) => {
     };
 
     const fetchMessage = async (): Promise<MessageType> => {
-        const response = await globalThis.fetch(`${API_URL}/api/chat`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(body)
-        });
+        try {
+            const response = await globalThis.fetch(`${API_URL}/api/chat`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(body)
+            });
 
-        const { data } = await response.json();
+            const { data } = await response.json();
 
-        return data;
+            return data;
+        } catch (err) {
+            console.log(err);
+            throw err;
+        }
+        
     };
     
     return fetchMessage();
