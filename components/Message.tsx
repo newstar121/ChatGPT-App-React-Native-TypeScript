@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
 	text: {
 		color: '#fff',
 		fontSize: 16,
-		alignSelf: 'flex-end',
+		alignSelf: 'flex-start',
 	},
 	profile: {
 		flexDirection: 'row',
