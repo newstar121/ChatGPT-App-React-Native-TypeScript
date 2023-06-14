@@ -18,7 +18,8 @@ const Message = ({ message }: MessageProps) => {
 	return (
 		<View style={ message.user.name === 'you' ? styles.messageyou : styles.messagechatgpt }>
 			<View style={styles.profile}>
-				<Image style={styles.Image} source={{ uri: message.user.avatar }} />
+				{/* <Image style={styles.Image} source={{ uri: message.user.avatar }} /> */}
+				<Image style={styles.Image} source={message.user.name === 'you' ? require('assets/icon.png') : require('assets/icon.png') }} />
 				<Text style={styles.author}>{message.user.name}</Text>
 			</View>
 			<TouchableOpacity onPress={() => copyToClipboard()}>

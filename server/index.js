@@ -71,7 +71,7 @@ app.post('/api/chat', async (req, res) => {
 				usage: response.data.usage,
 				user: {
 					name: 'chatgpt',
-					avatar: 'https://i.pravatar.cc/100?img=' + idRandonAvatar,
+					// avatar: 'https://i.pravatar.cc/100?img=' + idRandonAvatar,
 				}
 			}
 
