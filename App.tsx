@@ -33,6 +33,8 @@ export default function App() {
 							headerStyle: styles.headerstyle,
 							headerTitleStyle: styles.headertitlestyle,
 							headerTintColor: '#000000',
+							headerBackButtonMenuEnabled: false,
+							headerBackVisible: false
 						})}
 					/>
 					<Stack.Screen
@@ -43,6 +45,8 @@ export default function App() {
 							headerStyle: styles.headerstyle,
 							headerTitleStyle: styles.headertitlestyle,
 							headerTintColor: '#000000',
+							headerBackButtonMenuEnabled: false,
+							headerBackVisible: false
 						}}
 					/>
 				</Stack.Navigator>

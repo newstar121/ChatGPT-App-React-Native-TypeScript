@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
 		padding: 10,
 		margin: 10,
 		borderRadius: 10,
-		width: 'fit-content',
+		flexBasis:'auto',
 		maxWidth: '70%'
 
 	},
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
 		padding: 10,
 		margin: 10,
 		borderRadius: 10,
-		width: 'fit-content',
+		flexBasis: 'auto',
 		alignSelf: 'flex-end',
 		maxWidth: '70%',
 	},

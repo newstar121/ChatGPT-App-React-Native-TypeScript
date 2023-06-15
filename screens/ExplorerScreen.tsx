@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { StyleSheet, TouchableOpacity, Text, View, FlatList } from 'react-native'
+import { StyleSheet, TouchableOpacity, Text, View, FlatList, ScrollView } from 'react-native'
 import Footer from './Footer'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faCommentDots } from '@fortawesome/free-solid-svg-icons';
@@ -48,7 +48,7 @@ const ExplorerScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.body}>
+      <ScrollView style={styles.body}>
         <>
           <View style={{ borderRadius: 10, backgroundColor: '#dddddd', padding: 10 }}>
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
@@ -76,7 +76,7 @@ const ExplorerScreen = ({ navigation }) => {
           <Text style={styles.history}>Categories</Text>
           {renderCategory()}
         </>
-      </View>
+      </ScrollView>
       <Footer navigation={navigation}></Footer>
     </View>
   )
@@ -89,12 +89,14 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     alignItems: 'center',
-    padding: 20
+    // justifyContent:'space-between',
+    paddingLeft: 20,
+    paddingRight:20,
+    paddingTop: 20
   },
   body: {
-    flex: 1,
+  //   flex: 1,
     width: '100%',
-    overflow: 'scroll'
   },
   history: {
     fontSize: 20,
