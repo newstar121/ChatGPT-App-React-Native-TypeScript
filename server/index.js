@@ -9,7 +9,7 @@ const configuration = new Configuration({
 	apiKey: environment.OPENAI_API_KEY,
 });
 
-const openai = new OpenAIApi(configuration);
+// const openai = new OpenAIApi(configuration);
 
 const app = express();
 const port = 5050;
@@ -71,7 +71,7 @@ app.post('/api/chat', async (req, res) => {
 				usage: response.data.usage,
 				user: {
 					name: 'chatgpt',
-					// avatar: 'https://i.pravatar.cc/100?img=' + idRandonAvatar,
+					avatar: 'https://i.pravatar.cc/100?img=' + idRandonAvatar,
 				}
 			}
 
